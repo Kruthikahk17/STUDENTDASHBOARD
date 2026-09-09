@@ -1,0 +1,185 @@
+.study-planner {
+  padding: 35px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.small-title {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.planner-header h1 {
+  margin: 5px 0;
+  font-size: 32px;
+  color: #172033;
+}
+
+.planner-header p {
+  color: #64748b;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-card span {
+  color: #64748b;
+}
+
+.stat-card strong {
+  font-size: 24px;
+  color: #172033;
+}
+
+.session-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.session-form h2 {
+  margin-bottom: 20px;
+}
+
+.session-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.session-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.sessions-section h2 {
+  margin-bottom: 5px;
+}
+
+.sessions-section > p {
+  color: #64748b;
+}
+
+.empty-state {
+  background: white;
+  padding: 45px;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  margin-top: 20px;
+}
+
+.empty-state h3 {
+  color: #334155;
+}
+
+.empty-state p {
+  color: #94a3b8;
+}
+
+.session-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+.session-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-card h3 {
+  margin: 0 0 5px;
+}
+
+.session-card p {
+  margin: 5px 0;
+  color: #64748b;
+}
+
+.session-card small {
+  color: #94a3b8;
+}
+
+.session-card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+.session-card.completed {
+  opacity: 0.7;
+  background: #f0fdf4;
+}
+
+@media (max-width: 768px) {
+  .planner-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .session-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
