@@ -36,7 +36,7 @@ app.use("/api/assignments", assignmentRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/calendar", calendarRoutes);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
   try {
