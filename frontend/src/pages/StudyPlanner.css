@@ -183,3 +183,46 @@
     gap: 15px;
   }
 }
+
+.planner-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.planner-form input {
+  padding: 12px;
+  border: 1px solid #d9e1ec;
+  border-radius: 8px;
+  outline: none;
+}
+
+.planner-form button {
+  background: #1769e0;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.study-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.study-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.study-card h3 {
+  color: #123b82;
+}

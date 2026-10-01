@@ -1,15 +1,35 @@
-function StatCard({ icon, title, value, description }) {
+function StatCard({
+  title,
+  value,
+  description,
+  icon,
+  bg,
+}) {
   return (
     <div className="stat-card">
 
-      <div className="stat-icon">
-        {icon}
-      </div>
+      <div className="stat-content">
 
-      <div className="stat-info">
-        <p>{title}</p>
-        <h2>{value}</h2>
-        <span>{description}</span>
+        <div>
+
+          <p className="stat-title">
+            {title}
+          </p>
+
+          <h2 className="stat-value">
+            {value}
+          </h2>
+
+          <p className="stat-description">
+            {description}
+          </p>
+
+        </div>
+
+        <div className={`stat-icon ${bg}`}>
+          {icon}
+        </div>
+
       </div>
 
     </div>

@@ -8,18 +8,19 @@ const protect = (req, res, next) => {
     req.headers.authorization.startsWith("Bearer")
   ) {
     try {
-      token =
-        req.headers.authorization.split(" ")[1];
+      token = req.headers.authorization.split(" ")[1];
 
       const decoded = jwt.verify(
         token,
         process.env.JWT_SECRET
       );
 
-      req.user = decoded.id;
+      req.user = {
+        id: decoded.id,
+      };
 
       next();
-
+      return;
     } catch (error) {
       return res.status(401).json({
         message: "Invalid or expired token.",
@@ -27,11 +28,9 @@ const protect = (req, res, next) => {
     }
   }
 
-  if (!token) {
-    return res.status(401).json({
-      message: "Not authorized. Login required.",
-    });
-  }
+  return res.status(401).json({
+    message: "Not authorized. Login required.",
+  });
 };
 
 module.exports = protect;

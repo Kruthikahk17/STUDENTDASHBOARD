@@ -1,0 +1,26 @@
+function ProgressCard({ subject, value }) {
+  return (
+    <div className="mb-4">
+
+      <div className="mb-1 flex justify-between text-sm">
+        <span className="font-medium text-gray-700">
+          {subject}
+        </span>
+
+        <span className="font-semibold text-gray-600">
+          {value}
+        </span>
+      </div>
+
+      <div className="h-2 w-full rounded-full bg-gray-200">
+        <div
+          className="h-2 rounded-full bg-blue-500"
+          style={{ width: value }}
+        ></div>
+      </div>
+
+    </div>
+  );
+}
+
+export default ProgressCard;

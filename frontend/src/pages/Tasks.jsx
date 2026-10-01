@@ -1,68 +1,45 @@
+import React, { useState } from "react";
+
 function Tasks() {
+  const [tasks, setTasks] = useState([
+    { title: "Complete DBMS Assignment", completed: false },
+    { title: "Study Operating Systems", completed: false },
+    { title: "Prepare Project Report", completed: true },
+  ]);
+
+  const toggleTask = (index) => {
+    const updatedTasks = [...tasks];
+
+    updatedTasks[index].completed =
+      !updatedTasks[index].completed;
+
+    setTasks(updatedTasks);
+  };
+
   return (
-    <div className="page">
+    <div className="page-container">
+      <h1>✅ Tasks</h1>
+      <p>Manage your academic tasks.</p>
 
-      <div className="page-heading">
-        <div>
-          <p className="section-label">PRODUCTIVITY</p>
-          <h2>My Tasks</h2>
-          <p>Organize and track your academic tasks.</p>
+      {tasks.map((task, index) => (
+        <div className="task-card" key={index}>
+          <input
+            type="checkbox"
+            checked={task.completed}
+            onChange={() => toggleTask(index)}
+          />
+
+          <span
+            style={{
+              textDecoration: task.completed
+                ? "line-through"
+                : "none",
+            }}
+          >
+            {task.title}
+          </span>
         </div>
-
-        <button className="primary-button">
-          + Add Task
-        </button>
-      </div>
-
-      <div className="task-card">
-
-        <div className="task-left">
-          <input type="checkbox" />
-          <div>
-            <strong>Complete React project</strong>
-            <span>Due today</span>
-          </div>
-        </div>
-
-        <span className="priority high">
-          High
-        </span>
-
-      </div>
-
-      <div className="task-card">
-
-        <div className="task-left">
-          <input type="checkbox" />
-          <div>
-            <strong>Prepare DBMS presentation</strong>
-            <span>Due tomorrow</span>
-          </div>
-        </div>
-
-        <span className="priority medium">
-          Medium
-        </span>
-
-      </div>
-
-      <div className="task-card completed-task">
-
-        <div className="task-left">
-          <input type="checkbox" checked readOnly />
-
-          <div>
-            <strong>Submit network assignment</strong>
-            <span>Completed</span>
-          </div>
-        </div>
-
-        <span className="priority low">
-          Done
-        </span>
-
-      </div>
-
+      ))}
     </div>
   );
 }

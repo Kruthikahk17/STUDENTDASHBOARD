@@ -1,0 +1,262 @@
+.page-container {
+  padding: 28px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #172554;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.period-select {
+  padding: 11px 16px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  background: white;
+  color: #334155;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* STATISTICS */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+  border: 1px solid #edf1f7;
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.stat-card p {
+  margin: 0 0 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 27px;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.blue .stat-icon {
+  background: #e0f2fe;
+}
+
+.green .stat-icon {
+  background: #dcfce7;
+}
+
+.purple .stat-icon {
+  background: #ede9fe;
+}
+
+.orange .stat-icon {
+  background: #ffedd5;
+}
+
+/* CHART LAYOUT */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+  border: 1px solid #edf1f7;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.chart-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #172554;
+}
+
+.chart-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.chart-box {
+  height: 300px;
+}
+
+.doughnut-box {
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PRODUCTIVITY TREND */
+
+.full-chart {
+  margin-bottom: 20px;
+}
+
+.line-chart-box {
+  height: 300px;
+}
+
+.performance-badge {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* BOTTOM SECTION */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.subject-chart {
+  height: 300px;
+}
+
+/* SUMMARY */
+
+.summary-card h2 {
+  margin-top: 0;
+  color: #172554;
+  font-size: 18px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.summary-item strong {
+  color: #172554;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 9px;
+  background: #e8eef7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 9px;
+}
+
+.progress-bar div {
+  height: 100%;
+  border-radius: 10px;
+  background: #2563eb;
+}
+
+.achievement-box {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.achievement-box small {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-grid,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding: 15px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
