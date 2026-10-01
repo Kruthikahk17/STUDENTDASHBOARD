@@ -9,7 +9,7 @@ function LearningResources() {
   // FETCH RESOURCES
   // ================================
   useEffect(() => {
-    fetch("http://localhost:5000/api/resources", {
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/resources", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -67,7 +67,7 @@ function LearningResources() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/resources",
+        "https://student-dashboard-backend-x92c.onrender.com/api/resources",
         {
           method: "POST",
 
@@ -107,7 +107,7 @@ function LearningResources() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/resources/${id}`,
+        `https://student-dashboard-backend-x92c.onrender.com/api/resources/${id}`,
         {
           method: "DELETE",
 

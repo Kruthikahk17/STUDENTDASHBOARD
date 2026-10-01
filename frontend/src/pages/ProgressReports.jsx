@@ -5,7 +5,7 @@ function ProgressReports() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/assignments")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/assignments")
       .then((response) => response.json())
       .then((data) => {
         setAssignments(data);
@@ -14,7 +14,7 @@ function ProgressReports() {
         console.error("Error fetching assignments:", error);
       });
 
-    fetch("http://localhost:5000/api/tasks")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/tasks")
       .then((response) => response.json())
       .then((data) => {
         setTasks(data);

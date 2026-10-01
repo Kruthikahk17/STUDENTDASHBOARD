@@ -5,7 +5,7 @@ function Reminders() {
 
   // Load reminders
   useEffect(() => {
-    fetch("http://localhost:5000/api/reminders")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/reminders")
       .then((response) => response.json())
       .then((data) => {
         setReminders(data);
@@ -29,7 +29,7 @@ function Reminders() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/reminders",
+        "https://student-dashboard-backend-x92c.onrender.com/api/reminders",
         {
           method: "POST",
           headers: {

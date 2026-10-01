@@ -30,7 +30,7 @@ function ProductivityAnalytics() {
   const [analytics, setAnalytics] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/analytics/productivity")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/analytics/productivity")
       .then((response) => response.json())
       .then((data) => {
         setAnalytics(data);

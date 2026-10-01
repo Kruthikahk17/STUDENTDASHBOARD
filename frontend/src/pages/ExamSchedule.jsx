@@ -4,7 +4,7 @@ function ExamSchedule() {
   const [exams, setExams] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/exams")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/exams")
       .then((response) => response.json())
       .then((data) => {
         setExams(data);
@@ -30,7 +30,7 @@ function ExamSchedule() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/exams",
+        "https://student-dashboard-backend-x92c.onrender.com/api/exams",
         {
           method: "POST",
           headers: {
@@ -51,7 +51,7 @@ function ExamSchedule() {
   const deleteExam = async (id) => {
     try {
       await fetch(
-        `http://localhost:5000/api/exams/${id}`,
+        `https://student-dashboard-backend-x92c.onrender.com/api/exams/${id}`,
         {
           method: "DELETE",
         }

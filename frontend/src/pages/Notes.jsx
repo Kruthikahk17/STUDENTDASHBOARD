@@ -6,7 +6,7 @@ function Notes() {
 
   // Load notes from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/notes")
+    fetch("https://student-dashboard-backend-x92c.onrender.com/api/notes")
       .then((response) => response.json())
       .then((data) => {
         setNotes(data);
@@ -30,7 +30,7 @@ function Notes() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/notes",
+        "https://student-dashboard-backend-x92c.onrender.com/api/notes",
         {
           method: "POST",
           headers: {
@@ -52,7 +52,7 @@ function Notes() {
   const deleteNote = async (id) => {
     try {
       await fetch(
-        `http://localhost:5000/api/notes/${id}`,
+        `https://student-dashboard-backend-x92c.onrender.com/api/notes/${id}`,
         {
           method: "DELETE",
         }
@@ -74,7 +74,7 @@ function Notes() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notes/${id}`,
+        `https://student-dashboard-backend-x92c.onrender.com/api/notes/${id}`,
         {
           method: "PUT",
           headers: {

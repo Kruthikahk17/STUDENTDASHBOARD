@@ -7,7 +7,7 @@ function AcademicCalendar() {
   const [events, setEvents] = useState({});
 
   useEffect(() => {
-  fetch("http://localhost:5000/api/calendar")
+  fetch("https://student-dashboard-backend-x92c.onrender.com/api/calendar")
     .then((response) => response.json())
     .then((data) => {
       setEvents(data);
